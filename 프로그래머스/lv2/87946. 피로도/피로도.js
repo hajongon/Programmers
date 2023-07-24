@@ -35,11 +35,11 @@ function factorial(n) {
     return n * factorial(n - 1);
 }
 
-
 function getPermutation (array, selectNumber) {
-
+    
     if (selectNumber === 1) return array.map((element) => [element]);
     const result = [];
+    
     array.forEach ((element, originalArrIndex, array) => {
         const fix = element;
         const rest = array.filter((_, restArrIndex) => restArrIndex !== originalArrIndex);
@@ -47,5 +47,6 @@ function getPermutation (array, selectNumber) {
         const combineFix = permutation0fRest.map((elementArr) => [fix, ... elementArr]);
         result.push (... combineFix);
     });
+    
     return result;
 }
