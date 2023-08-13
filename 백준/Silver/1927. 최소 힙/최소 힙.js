@@ -1,7 +1,7 @@
 // https://chamdom.blog/heap-using-js/
 
 // 최소값 힙 클래스 정의
-class AbsMinHeap {
+class MinHeap {
   constructor() {
     this.heap = []; // 힙을 배열로 구현
   }
@@ -83,7 +83,7 @@ class AbsMinHeap {
 function solve(input) {
   const lines = input.split("\n"); // 입력을 줄 단위로 분리
   const n = parseInt(lines[0]); // 연산 개수
-  const heap = new AbsMinHeap(); // 최소값 힙 인스턴스 생성
+  const heap = new MinHeap(); // 최소값 힙 인스턴스 생성
   let output = ""; // 결과 문자열 초기화
 
   // 입력에 따라 연산 수행
